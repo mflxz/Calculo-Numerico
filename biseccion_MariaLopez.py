@@ -18,9 +18,9 @@ def f(x):
 def biseccion(a, b, Er, Ni):
 
     """ a: Límite inferior
-		b: Límite superior
-		Er: Error relativo
-		Ni: Número de iteraciones
+	b: Límite superior
+	Er: Error relativo
+	Ni: Número de iteraciones
     """
 
     Ea=100 #Error aproximado relativo
@@ -30,18 +30,18 @@ def biseccion(a, b, Er, Ni):
     
     print ('Método de Bisección')
 
-    if (f(a) * f(b) > 0):
+    if (f(a)*f(b) > 0):
         print("La funcion no cambia de signo")
          
-    while ((i < Ni) and (Ea > Er)): 
+    while ((i<Ni) and (Ea>Er)): 
         MP = MA
         MA = (a+b)/2
-        if (f(MA) * f(b)<0): #cambia de signo en el intervalo
+        if (f(MA)*f(b)<0): #cambia de signo en el intervalo
             a= MA
         else:
             b= MA
-        if (i > 0):
-            Ea= abs((MA - MP)/MA)*100
+        if (i>0):
+            Ea= abs((MA-MP)/MA)*100
 
         print ('El intérvalo es [',a,',',b,']') #Se encarga de mostrar los intervalos
         i = i+1
